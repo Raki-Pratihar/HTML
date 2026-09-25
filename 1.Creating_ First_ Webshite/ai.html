@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai HTML</title>
+</head>
+
+<body style="
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+">
+
+    <div style="
+        width: 90%;
+        max-width: 500px;
+        padding: 40px;
+        background: rgba(255,255,255,0.15);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 25px;
+        text-align: center;
+        color: white;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    ">
+
+        <h1 style="
+            margin-bottom: 10px;
+            font-size: 40px;
+        ">
+            My Links
+        </h1>
+
+        <p style="
+            opacity: 0.8;
+            font-size: 17px;
+        ">
+            Welcome to my interactive website 🚀
+        </p>
+
+        <!-- Live Clock -->
+        <div id="clock" style="
+            font-size: 18px;
+            margin: 20px 0;
+            font-weight: bold;
+        ">
+            Loading time...
+        </div>
+
+        <!-- Google -->
+        <a href="https://www.google.com"
+           target="_blank"
+           onclick="countClick('Google')"
+           onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.25)'"
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'"
+           style="
+               display: block;
+               padding: 15px;
+               margin: 15px 0;
+               background: white;
+               color: #333;
+               text-decoration: none;
+               border-radius: 12px;
+               font-size: 18px;
+               font-weight: bold;
+               transition: 0.3s;
+           ">
+            🔍 Google
+        </a>
+
+        <!-- Facebook -->
+        <a href="https://www.facebook.com"
+           target="_blank"
+           onclick="countClick('Facebook')"
+           onmouseover="this.style.transform='scale(1.05)'"
+           onmouseout="this.style.transform='scale(1)'"
+           style="
+               display: block;
+               padding: 15px;
+               margin: 15px 0;
+               background: #1877f2;
+               color: white;
+               text-decoration: none;
+               border-radius: 12px;
+               font-size: 18px;
+               font-weight: bold;
+               transition: 0.3s;
+           ">
+            👍 Facebook
+        </a>
+
+        <!-- YouTube -->
+        <a href="https://www.youtube.com"
+           target="_blank"
+           onclick="countClick('YouTube')"
+           onmouseover="this.style.transform='scale(1.05)'"
+           onmouseout="this.style.transform='scale(1)'"
+           style="
+               display: block;
+               padding: 15px;
+               margin: 15px 0;
+               background: #ff0000;
+               color: white;
+               text-decoration: none;
+               border-radius: 12px;
+               font-size: 18px;
+               font-weight: bold;
+               transition: 0.3s;
+           ">
+            ▶ YouTube
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com"
+           target="_blank"
+           onclick="countClick('GitHub')"
+           onmouseover="this.style.transform='scale(1.05)'"
+           onmouseout="this.style.transform='scale(1)'"
+           style="
+               display: block;
+               padding: 15px;
+               margin: 15px 0;
+               background: #24292e;
+               color: white;
+               text-decoration: none;
+               border-radius: 12px;
+               font-size: 18px;
+               font-weight: bold;
+               transition: 0.3s;
+           ">
+            💻 GitHub
+        </a>
+
+        <!-- Click Counter -->
+        <p id="counter" style="
+            margin-top: 25px;
+            font-size: 16px;
+        ">
+            Links clicked: 0
+        </p>
+
+        <!-- Dark Mode Button -->
+        <button onclick="toggleMode()" style="
+            border: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: 0.3s;
+        "
+        onmouseover="this.style.transform='scale(1.05)'"
+        onmouseout="this.style.transform='scale(1)'">
+            🌙 Toggle Dark Mode
+        </button>
+
+    </div>
+
+    <script>
+
+        // Click counter
+        let clicks = 0;
+
+        function countClick(site) {
+            clicks++;
+
+            document.getElementById("counter").innerText =
+                "Links clicked: " + clicks;
+
+            console.log(site + " clicked!");
+        }
+
+
+        // Live clock
+        function updateClock() {
+
+            let now = new Date();
+
+            let time = now.toLocaleTimeString();
+
+            document.getElementById("clock").innerText =
+                "🕒 " + time;
+        }
+
+        setInterval(updateClock, 1000);
+
+        updateClock();
+
+
+        // Dark mode
+        let darkMode = false;
+
+        function toggleMode() {
+
+            darkMode = !darkMode;
+
+            if (darkMode) {
+
+                document.body.style.background =
+                    "linear-gradient(135deg, #111827, #000000)";
+
+            } else {
+
+                document.body.style.background =
+                    "linear-gradient(135deg, #667eea, #764ba2)";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
