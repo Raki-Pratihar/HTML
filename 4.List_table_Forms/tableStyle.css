@@ -1,0 +1,76 @@
+
+/* Table Container */
+table {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Table Head */
+thead {
+    background: linear-gradient(135deg, #111827, #374151);
+    color: white;
+}
+
+th {
+    padding: 18px 22px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Table Body */
+td {
+    padding: 16px 22px;
+    color: #374151;
+    font-size: 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Alternate Row */
+tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+/* Hover Effect */
+tbody tr {
+    transition: all 0.25s ease;
+}
+
+tbody tr:hover {
+    background: #eef2ff;
+    transform: scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Remove bottom border from last row */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Salary Styling */
+td:last-child {
+    font-weight: 700;
+    color: #16a34a;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    table {
+        width: 95%;
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 13px 12px;
+    }
+}
