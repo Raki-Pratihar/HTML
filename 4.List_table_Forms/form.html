@@ -1,32 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <link rel="stylesheet" href="form.css">
 </head>
+
 <body>
-   <h1>Forms in html</h1>
-   <form action="/submit.php">
-    <!--Name input-->
-    <div>
-    <label for="name">Name</label>
-    <input id="name" type="text" placeholder="Enter your name">
-    </div>
+    <h1>Forms in html</h1>
+    <form action="/submit.php">
+        <!--Name input-->
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter your name">
+        </div>
 
-    <!--Phone input-->
-    <div>
-        <label for="phone">Phone</label>
-        <input id="phone" type="tel" placeholder="Enter your Phone" required>
-    </div>
+        <!--Phone input-->
+        <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" placeholder="Enter your Phone" required>
+        </div>
 
-    <!--Email input-->
-    <div>
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="Enter your Email" required>
-    </div>
+        <!--Email input-->
+        <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter your Email" required>
+        </div>
 
-    
-   </form>
+        <!--Data input-->
+        <div>
+            <label for="dob">Date of birth</label>
+            <input id="dob" type="date" required>
+        </div>
+
+        <!--Dropdown (select input) for gender-->
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!--Radio Buttons for subscriotion-->
+        <div>
+            <p>Subscription Planes</p>
+            <input id="basic" type="radio" name="subscription">
+            <label for="basic">Basic</label>
+
+            <input id="premium" type="radio" name="subscription">
+            <label for="premium">Premium</label>
+
+            <input id="vip" type="radio" name="subscription">
+            <label for="vip">VIP</label>
+        </div>
+
+        <!--Checkbox to agree terms -->
+        <div>
+            <input id="term" type="checkbox" required>
+            <label for="term">I agree to the terms</label>
+        </div>
+
+        <!--Text area for comment-->
+        <div>
+            <label for="comment">Comment</label>
+            <textarea  id="comment" placeholder="Enter your comment" rows="4"></textarea>
+        </div>
+
+        <!--Submit Button-->
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
 </body>
+
 </html>
